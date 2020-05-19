@@ -1,0 +1,48 @@
+SELECT {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; FONT-SIZE: 12px; BORDER-LEFT: medium none; BORDER-BOTTOM: #a0a0a0 1px solid; BACKGROUND-COLOR: transparent
+}
+.XYDataGrid1-table {
+	FONT-SIZE: 9pt;border-style:Ridge;border-width:1px;
+}
+.XYDataGrid1-table-header-tr 
+{
+	color:#E7E7FF;background-color:#FF5500;font-weight:bold;
+	FONT-SIZE: 9pt;  TEXT-ALIGN: center
+}
+.XYDataGrid1-table-left-td 
+{
+	color:#000000;background-color:#CCCCCC;font-weight:bold;
+	FONT-SIZE: 9pt;  TEXT-ALIGN: center
+}
+.XYDataGrid1-table-data-tr {
+	FONT-SIZE: 9pt; LINE-HEIGHT: 18pt; BACKGROUND-COLOR: #eeeeee
+}
+.XYDataGrid1-table-data-alter-tr {
+	FONT-SIZE: 9pt; LINE-HEIGHT: 18pt; BACKGROUND-COLOR: #eeeeee
+}
+.XYDataGrid1-table-pageControl-tr {
+	FONT-SIZE: 9pt; COLOR: white;BACKGROUND-COLOR: #429EEF; TEXT-ALIGN: center
+}
+.XYDataGrid1-header-cell {
+    FONT-SIZE: 9pt;
+}
+.XYDataGrid1-data-cell {
+	FONT-SIZE: 9pt;
+}
+.XYDataGrid1-pageControl-cell {
+	FONT-SIZE: 9pt;
+}
+.outset-table
+{
+    BORDER-RIGHT: 1px outset;
+    BORDER-TOP: 1px outset;
+    FONT-SIZE: 10pt;
+    BORDER-LEFT: 1px outset;
+    BORDER-BOTTOM: 1px outset;
+    COLOR: white;
+	TEXT-ALIGN: center;
+	BACKGROUND-COLOR: #429EEF;
+}
+.hand {
+	CURSOR: hand
+}

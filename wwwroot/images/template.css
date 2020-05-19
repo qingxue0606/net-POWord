@@ -1,0 +1,297 @@
+BODY {
+	FONT-FAMILY: Verdana, Arial, Helvetica, Sans-Serif
+}
+A {
+	COLOR: #0033cc
+}
+A:link {
+	COLOR: #0033cc
+}
+A:visited {
+	COLOR: #800080
+}
+A:hover {
+	COLOR: #ff6600
+}
+A:active {
+	COLOR: #800080
+}
+A.OPLink {
+	COLOR: #0033cc;TEXT-DECORATION: none
+}
+A.OPLink:link {
+	COLOR: #0033cc;TEXT-DECORATION: none
+}
+A.OPLink:visited {
+	COLOR: #0033cc;TEXT-DECORATION: none
+}
+A.OPLink:hover {
+	COLOR: #ff6600;TEXT-DECORATION: underline
+}
+A.OPLink:active {
+	COLOR: #0033cc;TEXT-DECORATION: none
+}
+.thinInput
+{
+    BACKGROUND-COLOR: #ffffff;
+    BORDER-BOTTOM: #888888 1px solid;
+    BORDER-LEFT: #888888 1px solid;
+    BORDER-RIGHT: #888888 1px solid;
+    BORDER-TOP: #888888 1px solid;
+    FONT-FAMILY: "ËÎÌו";
+    FONT-SIZE: 9pt;
+    TEXT-DECORATION: none;
+    WIDTH:50%;
+    COLOR: red;
+
+}
+H1 {
+	FONT-WEIGHT: normal; FONT-SIZE: 130%; MARGIN: 12px 0px 0px; COLOR: #000000; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+H2 {
+	FONT-WEIGHT: bold; FONT-SIZE: 85%; MARGIN: 0.4em 0px 0.5em 20px
+}
+H3 {
+	FONT-WEIGHT: bold; FONT-SIZE: 75%; MARGIN: 0.4em 0px 0.5em 20px
+}
+H4 {
+	FONT-WEIGHT: bold; FONT-SIZE: 70%; MARGIN: 0px 0px 1em
+}
+H5 {
+	FONT-WEIGHT: bold; FONT-SIZE: 65%; MARGIN: 0px 0px 5px
+}
+.stdBullet {
+	PADDING-RIGHT: 0.5em; FONT-SIZE: 70%; COLOR: #a6a6a6; PADDING-TOP: 2px
+}
+.indent {
+	MARGIN-LEFT: 20px
+}
+.headline {
+	PADDING-BOTTOM: 0.5em
+}
+.headlineLink {
+	FONT-SIZE: 70%
+}
+.headlineInfo {
+	FONT-SIZE: 65%; COLOR: #999999
+}
+.refLabel {
+	FONT-WEIGHT: bold; FONT-SIZE: 70%; LINE-HEIGHT: 140%
+}
+.refLabelH2 {
+	FONT-WEIGHT: bold; FONT-SIZE: 85%; MARGIN-BOTTOM: 0.3em; LINE-HEIGHT: 140%
+}
+.refLabelH3 {
+	FONT-WEIGHT: bold; FONT-SIZE: 75%; LINE-HEIGHT: 140%
+}
+P.nomargin {
+	FONT-SIZE: 70%; MARGIN: 0px; LINE-HEIGHT: 140%
+}
+.linkList {
+	MARGIN-TOP: 0.3em; MARGIN-BOTTOM: -5px
+}
+.linkListItem {
+	PADDING-BOTTOM: 0.3em
+}
+.listLink {
+	FONT-SIZE: 70%; LINE-HEIGHT: 140%
+}
+P {
+	MARGIN-TOP: 0em; FONT-SIZE: 75%; MARGIN-BOTTOM: 1em; LINE-HEIGHT: 140%
+}
+P.blurb {
+	MARGIN-TOP: 0em; FONT-SIZE: 75%; MARGIN-BOTTOM: 1.4em; MARGIN-LEFT: 20px; LINE-HEIGHT: 140%
+}
+.container {
+	MARGIN-TOP: 0em; FONT-SIZE: 65%; MARGIN-BOTTOM: 1em; LINE-HEIGHT: 130%
+}
+.newLink {
+	FONT-WEIGHT: bold; FONT-SIZE: 65%; COLOR: red
+}
+HR {
+	MARGIN-TOP: 0.5em; MARGIN-BOTTOM: 0px
+}
+.sideObject {
+	PADDING-BOTTOM: 1em
+}
+.sidebarContent {
+	PADDING-RIGHT: 7px; PADDING-LEFT: 7px; BACKGROUND: #e9e9e6; PADDING-BOTTOM: 6px; WIDTH: 165px; PADDING-TOP: 8px
+}
+.sidebarContent P {
+	MARGIN-BOTTOM: 0.8em
+}
+.containerHeader {
+	BACKGROUND: #999999
+}
+.containerFooter {
+	BACKGROUND: #999999; MARGIN-BOTTOM: 12px
+}
+.containerImage {
+	MARGIN-TOP: 0.5em; MARGIN-BOTTOM: 0.5em; TEXT-ALIGN: center
+}
+.spotGraphic {
+	PADDING-BOTTOM: 3px; PADDING-TOP: 3px
+}
+.sidebarLink {
+	FONT-SIZE: 65%; PADDING-BOTTOM: 0.75em; LINE-HEIGHT: 130%
+}
+DIV.hr {
+	BORDER-TOP: #cccccc 1px solid; OVERFLOW-Y: hidden; WIDTH: 100%; HEIGHT: 5px
+}
+.reference {
+	MARGIN-BOTTOM: 16px
+}
+.headlines {
+	MARGIN-BOTTOM: 9px; MARGIN-LEFT: 20px
+}
+.dataTable {
+	MARGIN-LEFT: 20px; BORDER-BOTTOM: #cccccc 1px solid
+}
+.dataTable TD {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; PADDING-TOP: 5px
+}
+.tableHeader {
+	FONT-WEIGHT: bold; FONT-SIZE: 80%; BACKGROUND: #999999; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.superHeader {
+	FONT-SIZE: 70%; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.stdHeader {
+	BACKGROUND: #cccccc; COLOR: #000000
+}
+.stdHeader TD {
+	BORDER-TOP: #cccccc 1px solid; FONT-WEIGHT: bold; FONT-SIZE: 70%; BORDER-LEFT: #cccccc 1px solid; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.subHeader {
+	BACKGROUND: #dddddd
+}
+.subHeader TD {
+	BORDER-TOP: #cccccc 1px solid; FONT-WEIGHT: bold; FONT-SIZE: 70%; BORDER-LEFT: #cccccc 1px solid; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.record TD {
+	BORDER-TOP: #cccccc 1px solid; BORDER-LEFT: #cccccc 1px solid
+}
+.record TD TD {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+.evenRecord {
+	BACKGROUND: #e9e9e6
+}
+.evenRecord TD {
+	BORDER-TOP: #cccccc 1px solid; BORDER-LEFT: #cccccc 1px solid
+}
+.evenRecord TD TD {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+.rowLabel {
+	FONT-WEIGHT: bold; BACKGROUND: #f0f0f0
+}
+P.lastInCell {
+	PADDING-BOTTOM: 0px
+}
+.keyLegend {
+	PADDING-BOTTOM: 6px; MARGIN-LEFT: 20px
+}
+.key {
+	PADDING-RIGHT: 10px; FONT-WEIGHT: bold; FONT-SIZE: 65%; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.legend {
+	FONT-SIZE: 65%; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.legendBullets {
+	COLOR: #666666
+}
+.dataBullets {
+	COLOR: #666666; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.tableFootnotes {
+	MARGIN-TOP: 7px; MARGIN-LEFT: 5px
+}
+.dataTableBottomMargin {
+	MARGIN-BOTTOM: 18px; OVERFLOW: hidden; HEIGHT: 1px
+}
+TR.sortable {
+	BACKGROUND: #ccc; COLOR: #000000
+}
+TD.sortable {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+TD.sortable A {
+	CURSOR: hand
+}
+TD.sortable A:hover {
+	BACKGROUND: #e0e0e0
+}
+TD.sortable TABLE {
+	BORDER-RIGHT: #999 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #fff 1px solid; PADDING-LEFT: 5px; FONT-WEIGHT: bold; FONT-SIZE: 70%; PADDING-BOTTOM: 5px; BORDER-LEFT: #fff 1px solid; PADDING-TOP: 5px; BORDER-BOTTOM: #999 1px solid; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; ; HEIGHT: expression(this.parentElement.parentElement.clientHeight)
+}
+TD.selectedSort {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+TD.selectedSort A {
+	BACKGROUND: #999; CURSOR: hand
+}
+TD.selectedSort TABLE {
+	BORDER-RIGHT: #ccc 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #666 1px solid; PADDING-LEFT: 5px; FONT-WEIGHT: bold; FONT-SIZE: 70%; PADDING-BOTTOM: 5px; BORDER-LEFT: #666 1px solid; COLOR: white; PADDING-TOP: 5px; BORDER-BOTTOM: #ccc 1px solid; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; ; HEIGHT: expression(this.parentElement.parentElement.clientHeight)
+}
+.simpleForm {
+	MARGIN: 20px 0px 1.5ex 20px
+}
+.simpleForm P {
+	FONT-WEIGHT: bold; FONT-SIZE: 65%; MARGIN-BOTTOM: 0px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.simpleForm DIV {
+	MARGIN-BOTTOM: 14px
+}
+.simpleFormSelect {
+	MARGIN-TOP: 2px; FONT-SIZE: 70%; MARGIN-RIGHT: 6px; FONT-FAMILY: Tahoma, Arial, Helvetica, sans-serif
+}
+.simpleFormSelectSmall {
+	MARGIN-TOP: 2px; FONT-SIZE: 70%; WIDTH: 123px; MARGIN-RIGHT: 6px; FONT-FAMILY: Tahoma, Arial, Helvetica, sans-serif
+}
+.simpleFormSelectMedium {
+	MARGIN-TOP: 2px; FONT-SIZE: 70%; WIDTH: 169px; MARGIN-RIGHT: 6px; FONT-FAMILY: Tahoma, Arial, Helvetica, sans-serif
+}
+.simpleFormSelectLarge {
+	MARGIN-TOP: 2px; FONT-SIZE: 70%; WIDTH: 261px; MARGIN-RIGHT: 6px; FONT-FAMILY: Tahoma, Arial, Helvetica, sans-serif
+}
+.simpleFormText {
+	MARGIN-TOP: 1px; FONT-SIZE: 70%; WIDTH: 261px; MARGIN-RIGHT: 6px; FONT-FAMILY: Tahoma, Arial, Helvetica, sans-serif
+}
+.simpleFormSubmit {
+	PADDING-RIGHT: 1px; PADDING-LEFT: 2px; FONT-SIZE: 70%; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; FONT-FAMILY: Tahoma, Arial, Helvetica, sans-serif
+}
+.listBullet {
+	FONT-SIZE: 80%; COLOR: #a6a6a6
+}
+.listItem {
+	PADDING-RIGHT: 0em; PADDING-LEFT: 0.5em; PADDING-BOTTOM: 0em; PADDING-TOP: 0em
+}
+.DetailsContent {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 20px; FONT-SIZE: 75%; PADDING-BOTTOM: 0px; MARGIN: 0px; line-height:16pt;  PADDING-TOP: 0px; FONT-FAMILY: Verdana, Arial
+}
+.text {
+	font-size: 9pt;
+	line-height: 20px;
+	color: #333333;
+}
+.text1 {
+	font-size: 9pt;
+	line-height: 30px;
+	color: #333333;
+}
+.lnk_iconic {
+	FONT-SIZE: 9pt; FONT-FAMILY: arial,helvetica
+}
+.mhTextEmph {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt; COLOR: white; FONT-FAMILY: arial,helvetica
+}
+.myduan {
+	line-height: 20px;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 0px;
+	padding-left: 5px;
+	font-family: "??";
+	font-size: 12px;
+}

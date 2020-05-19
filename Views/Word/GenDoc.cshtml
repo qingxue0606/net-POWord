@@ -1,0 +1,30 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+    <title>动态生成文件</title>
+    <meta name="GENERATOR" Content="Microsoft Visual Studio .NET 7.1">
+    <meta name="CODE_LANGUAGE" Content="C#">
+    <meta name="vs_defaultClientScript" content="JavaScript">
+    <meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+</HEAD>
+<body>
+    <script type="text/javascript">
+        function poPrint() {
+            document.getElementById("PageOfficeCtrl1").ShowDialog(4);
+        }
+        function poSetFullScreen() {
+            document.getElementById("PageOfficeCtrl1").FullScreen = !document.getElementById("PageOfficeCtrl1").FullScreen;
+        }
+    </script>
+    <form id="Form1" method="post" runat="server">
+        <div style=" width:1000px; height:1000px;">
+            @Html.Raw(ViewBag.POCtrl)
+        </div>
+    </form>
+</body>
+</HTML>

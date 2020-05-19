@@ -1,0 +1,5 @@
+欢迎使用 PageOffice 产品
+PageOffice 注册信息：注册码：V541A-Y7PD-C6J1-4TPFH<br>版本：Enterprise 5
+<br>此产品是<span style="color:Red;">试用版</span>，试用结束时间是 2020-06-14 00:43:48.
+<p>License文件位置：D:\net\NetCoreSamples5/Views/PageOffice/license.lic</p>
+PageOffice 运行信息：没有日志信息。

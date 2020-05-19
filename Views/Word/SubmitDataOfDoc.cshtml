@@ -1,0 +1,57 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+    <title>用户填写请假条</title>
+    <meta name="GENERATOR" Content="Microsoft Visual Studio .NET 7.1">
+    <meta name="CODE_LANGUAGE" Content="C#">
+    <meta name="vs_defaultClientScript" content="JavaScript">
+    <meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+</HEAD>
+<body>
+    <script language="JavaScript">
+        function poSave() {
+            document.getElementById("PageOfficeCtrl1").WebSave();
+        }
+        function poSetFullScreen() {
+            document.getElementById("PageOfficeCtrl1").FullScreen = !document.getElementById("PageOfficeCtrl1").FullScreen;
+        }
+        function OnWordDataRegionClick(Name, Value, Left, Bottom) {
+            if (Name == "PO_date") {
+                var strRet = document.getElementById("PageOfficeCtrl1").ShowHtmlModalDialog("/datetimer.htm", Value, "left=" + Left + "px;top=" + Bottom + "px;width=260px;height=260px;frame=no;");
+                if (strRet != "") {
+                    return (strRet);
+                }
+                else {
+                    if ((Value == undefined) || (Value == ""))
+                        return " ";
+                    else
+                        return Value;
+                }
+            }
+            if (Name == "PO_dept") {
+                var strRet = document.getElementById("PageOfficeCtrl1").ShowHtmlModalDialog("/selectDept.htm", Value, "left=" + Left + "px;top=" + Bottom + "px;width=260px;height=260px;frame=no;");
+                if (strRet != "") {
+                    return (strRet);
+                }
+                else {
+                    if ((Value == undefined) || (Value == ""))
+                        return " ";
+                    else
+                        return Value;
+                }
+            }
+
+        }
+    </script>
+    <form id="Form1" method="post" runat="server">
+
+        <!--   PageOffice 客户端引用    -->
+        <div style=" width:1000px; height:1000px;">
+            @Html.Raw(ViewBag.POCtrl)
+        </div>
+    </form>
+</body>
+</HTML>
