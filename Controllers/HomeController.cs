@@ -31,14 +31,12 @@ namespace POWord.Controllers
         {
             string sql = "select * from leaveRecord order by ID DESC ";
             SqliteConnection conn = new SqliteConnection(connString);
-
             conn.Open();
             SqliteCommand cmd = new SqliteCommand(sql, conn);
             cmd.ExecuteNonQuery();
             cmd.CommandText = sql;
             SqliteDataReader dr = cmd.ExecuteReader();
             StringBuilder strGrid = new StringBuilder();
-
             if (!dr.HasRows)
             {
                 strGrid.Append("<tr class='XYDataGrid1-table-data-tr'>\r\n");
@@ -55,16 +53,14 @@ namespace POWord.Controllers
                     strGrid.Append("<td width='20%' height='16' bgcolor='' class='XYDataGrid1-data-cell'><div align='center'><font face='宋体'>" + dr["SubmitTime"].ToString() + "</font></div></td>\r\n");
                     strGrid.Append("<td width='45%' height='16' bgcolor='' class='XYDataGrid1-data-cell'><div align='center'>\r\n");
                     strGrid.Append("<a class=OPLink href='Word/datalist?ID=" + dr["ID"].ToString() + "'  target='_blank' >数据库中字段内容</a>&nbsp;\r\n");
-                    strGrid.Append("<a class=OPLink href=\"javascript:POBrowser.openWindow('Word/SubmitDataOfDoc?ID=" + dr["ID"].ToString() + "', 'width=1200px;height=800px;');\">用户填写请假条</a>&nbsp;\r\n");
-                    strGrid.Append("<a class=OPLink href=\"javascript:POBrowser.openWindow('Word/GenDoc?ID=" + dr["ID"].ToString() + "', 'width=1200px;height=800px;');\">动态生成格式文档</a>&nbsp;\r\n");
+                    strGrid.Append("<a class=OPLink href=\"javascript:POBrowser.openWindowModeless('Word/SubmitDataOfDoc?ID=" + dr["ID"].ToString() + "', 'width=1200px;height=800px;');\">用户填写请假条</a>&nbsp;\r\n");
+                    strGrid.Append("<a class=OPLink href=\"javascript:POBrowser.openWindowModeless('Word/GenDoc?ID=" + dr["ID"].ToString() + "', 'width=1200px;height=800px;');\">动态生成格式文档</a>&nbsp;\r\n");
                     strGrid.Append("</div></td></tr>\r\n");
                 }
             }
             dr.Close();
             conn.Close();
-
             ViewBag.strGrid = strGrid;
-
             return View();
         }
 

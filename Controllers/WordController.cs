@@ -13,24 +13,19 @@ namespace POWord.Controllers
     public class WordController : Controller
     {
         private string connString;
-
         private readonly IWebHostEnvironment _webHostEnvironment;
-
         public WordController(IWebHostEnvironment webHostEnvironment)
         {
             _webHostEnvironment = webHostEnvironment;
-            string dataPath = _webHostEnvironment.WebRootPath.Replace("/", "\\");
-            dataPath = dataPath.Substring(0, dataPath.Length - 7) + "appData\\" + "demo_poword.db";
+            string rootPath = _webHostEnvironment.WebRootPath.Replace("/", "\\");
+            string dataPath = rootPath.Substring(0, rootPath.Length - 7) + "appData\\" + "demo_poword.db";
             connString = "Data Source=" + dataPath;
         }
         public IActionResult datalist()
         {
-
             string docID = Request.Query["ID"];
-
             string sql = "select * from leaveRecord where ID = " + docID;
             SqliteConnection conn = new SqliteConnection(connString);
-
             conn.Open();
             SqliteCommand cmd = new SqliteCommand(sql, conn);
             cmd.ExecuteNonQuery();
@@ -51,15 +46,11 @@ namespace POWord.Controllers
             return View();
         }
 
-         public IActionResult GenDoc()
+        public IActionResult GenDoc()
         {
-
-
             string docID = Request.Query["ID"];
-
             string sql = "select * from leaveRecord where ID = " + docID;
             SqliteConnection conn = new SqliteConnection(connString);
-
             conn.Open();
             SqliteCommand cmd = new SqliteCommand(sql, conn);
             cmd.ExecuteNonQuery();
@@ -72,65 +63,50 @@ namespace POWord.Controllers
             doc.DisableWindowRightClick = true;
             if (dr.Read())
             {
-
                 doc.OpenDataRegion("PO_name").Value = dr["Name"].ToString();
                 doc.OpenDataRegion("PO_dept").Value = dr["Dept"].ToString();
-                doc.OpenDataRegion("PO_cause").Value = dr["Cause"].ToString(); 
+                doc.OpenDataRegion("PO_cause").Value = dr["Cause"].ToString();
                 doc.OpenDataRegion("PO_num").Value = dr["Num"].ToString(); ;
                 doc.OpenDataRegion("PO_date").Value = dr["SubmitTime"].ToString(); ;
                 doc.OpenDataRegion("PO_tip").Value = ""; ;
-
             }
             dr.Close();
             conn.Close();
-
             // 设置界面样式
             pageofficeCtrl.Caption = "动态生成格式文件";
             pageofficeCtrl.BorderStyle = PageOfficeNetCore.BorderStyleType.BorderThin;
             // 添加自定义工具条按钮
             pageofficeCtrl.AddCustomToolButton("打印", "poPrint", 6);
             pageofficeCtrl.AddCustomToolButton("全屏/还原", "poSetFullScreen", 4);
-
             ////获取数据对象
             pageofficeCtrl.SetWriter(doc);
-
-
             //打开Word文档
             pageofficeCtrl.WebOpen("/doc/template.doc", PageOfficeNetCore.OpenModeType.docReadOnly, "tom");
             ViewBag.POCtrl = pageofficeCtrl.GetHtmlCode("PageOfficeCtrl1");
-
             return View();
         }
 
         public IActionResult SubmitDataOfDoc()
         {
-
             string docID = Request.Query["ID"];
-
             string sql = "select * from leaveRecord where ID = " + docID;
             SqliteConnection conn = new SqliteConnection(connString);
-
             conn.Open();
             SqliteCommand cmd = new SqliteCommand(sql, conn);
             cmd.ExecuteNonQuery();
             cmd.CommandText = sql;
             SqliteDataReader dr = cmd.ExecuteReader();
-
             PageOfficeNetCore.PageOfficeCtrl pageofficeCtrl = new PageOfficeNetCore.PageOfficeCtrl(Request);
             pageofficeCtrl.ServerPage = "../PageOffice/POServer";
             PageOfficeNetCore.WordWriter.WordDocument doc = new PageOfficeNetCore.WordWriter.WordDocument();
             PageOfficeNetCore.WordWriter.DataRegion drName = doc.OpenDataRegion("PO_name");
-
             drName.Editing = true;
             PageOfficeNetCore.WordWriter.DataRegion drDept = doc.OpenDataRegion("PO_dept");
-
             drDept.Shading.BackgroundPatternColor = Color.Silver;
             //drDept.Editing = true;
             PageOfficeNetCore.WordWriter.DataRegion drCause = doc.OpenDataRegion("PO_cause");
-   
             drCause.Editing = true;
             PageOfficeNetCore.WordWriter.DataRegion drNum = doc.OpenDataRegion("PO_num");
-        
             drNum.Editing = true;
             PageOfficeNetCore.WordWriter.DataRegion drDate = doc.OpenDataRegion("PO_date");
             drDate.Shading.BackgroundPatternColor = Color.Pink;
@@ -138,9 +114,6 @@ namespace POWord.Controllers
             PageOfficeNetCore.WordWriter.DataRegion drTip = doc.OpenDataRegion("PO_tip");
             drTip.Font.Italic = true;
             drTip.Value = "提示：带背景色的文字是只能通过选择设置，[]中的文字是可以录入编辑的。";
-
-
-
             if (dr.Read())
             {
                 doc.OpenDataRegion("PO_name").Value = dr["Name"].ToString();
@@ -151,35 +124,30 @@ namespace POWord.Controllers
             }
             dr.Close();
             conn.Close();
-
-
             // 设置界面样式
             pageofficeCtrl.Caption = "用户填写请假条";
             pageofficeCtrl.BorderStyle = PageOfficeNetCore.BorderStyleType.BorderThin;
             // 添加自定义工具条按钮
             pageofficeCtrl.AddCustomToolButton("保存", "poSave", 1);
             pageofficeCtrl.AddCustomToolButton("全屏/还原", "poSetFullScreen", 4);
-
             pageofficeCtrl.JsFunction_OnWordDataRegionClick = "OnWordDataRegionClick()";
-
             //获取数据对象
             pageofficeCtrl.SetWriter(doc);
-
             //设置保存页面
             pageofficeCtrl.SaveDataPage = "SaveData?ID=" + docID;
             //打开Word文档
             pageofficeCtrl.WebOpen("/doc/template.doc", PageOfficeNetCore.OpenModeType.docSubmitForm, "tom");
             ViewBag.POCtrl = pageofficeCtrl.GetHtmlCode("PageOfficeCtrl1");
-
             return View();
         }
 
-        public async Task<ActionResult> SaveData() {
+        public async Task<ActionResult> SaveData()
+        {
 
             string ErrorMsg = "";
             PageOfficeNetCore.WordReader.WordDocument doc = new PageOfficeNetCore.WordReader.WordDocument(Request, Response);
             await doc.LoadAsync();
-            
+
             string sName = doc.OpenDataRegion("PO_name").Value;
             string sDept = doc.OpenDataRegion("PO_dept").Value;
             string sCause = doc.OpenDataRegion("PO_cause").Value;
@@ -244,6 +212,5 @@ namespace POWord.Controllers
             doc.Close();
             return Content("OK");
         }
-
     }
 }
